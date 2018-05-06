@@ -64,12 +64,19 @@ class App extends Component {
     );
   }
 
+  styles = {
+    backgroundColor: "#FAFAFA",
+    padding: "10px",
+    border: "1px solid #CCCCCC",
+    margin: "5px 0px"
+  }
+
   render() {
     return (
       <div className="App">
         <h1 className="App-title">Welcome to React</h1>
         <p>Is this working?</p>
-        <button onClick={() => this.switchNameHandler('Captian Rogers', 'Peter', 'Highness')}>Switch Names</button>
+        <button style={this.styles} onClick={() => this.switchNameHandler('Captian Rogers', 'Peter', 'Highness')}>Switch Names</button>
         <Person 
           name={this.state.person[0].name}
           age={this.state.person[0].age}
